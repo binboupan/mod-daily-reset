@@ -45,6 +45,7 @@ public:
 
         player->ResetDailyQuestStatus();
         player->ResetInstances(player->GetGUID() , INSTANCE_RESET_ALL, false);
+        player->ResetInstances(player->GetGUID() , INSTANCE_RESET_ALL, true);
         handler->PSendSysMessage("Your daily limits have been reset.");
         return true;
     }
