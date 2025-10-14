@@ -15,7 +15,7 @@ public:
 
     void OnPlayerLogin(Player* player) override
     {
-        ChatHandler(player->GetSession()).PSendSysMessage("Type .daily reset to reset your daily dungeon limits.");
+        ChatHandler(player->GetSession()).PSendSysMessage("Type .daily reset to reset your daily limits.");
     }
 };
 
@@ -44,7 +44,8 @@ public:
             return false;
 
         player->ResetDailyQuestStatus();
-        handler->PSendSysMessage("Your daily dungeon limits have been reset.");
+        player->ResetInstances(player->GetGUID() , INSTANCE_RESET_ALL, false);
+        handler->PSendSysMessage("Your daily limits have been reset.");
         return true;
     }
 };
