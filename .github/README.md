@@ -1,5 +1,4 @@
-# mod-daily-reset - Module template
-
+# mod-daily-reset 
 
 ## About this module
   
